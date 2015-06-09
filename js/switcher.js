@@ -12,8 +12,8 @@ var switchStyle = function() {
                  : data
     );
   });
-  if (window.location.host === 'css1k.com' && styleSlug !== 'default') {
-    _gaq.push(['_trackPageview', styleSlug]);
+  if (window.location.host === 'css1k.net' && styleSlug !== 'default') {
+    ga('send', 'pageview', styleSlug);
   }
 };
 
