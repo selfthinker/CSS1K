@@ -17,10 +17,41 @@ var switchStyle = function() {
   }
 };
 
+var navigateStyles = function(type) {
+  var curStyleLink = window.location.hash || './',
+    $curStyleLink = $('a[href="'+curStyleLink+'"]'),
+    $nextStyleLink = $curStyleLink.parent().next('li').find('a:first-child'),
+    $prevStyleLink = $curStyleLink.parent().prev('li').find('a:first-child');
+
+  if (!$nextStyleLink.length) {
+    $nextStyleLink = $('header nav li:first-child a:first-child');
+  }
+  if (!$prevStyleLink.length) {
+    $prevStyleLink = $('header nav li:last-child a:first-child');
+  }
+
+  if (type === 'prev') {
+    $prevStyleLink[0].click();
+  }
+  if (type === 'next') {
+    $nextStyleLink[0].click();
+  }
+};
+
 $(function() {
 
   // For permalinks and default style.
   switchStyle();
+
+  // navigate forwards and backwards
+  $('body').on('keydown', function(e){
+    if (e.which == 37) { // left arrow
+      navigateStyles('prev');
+    }
+    if (e.which == 39) { // right arrow
+      navigateStyles('next');
+    }
+  });
 
   // Track hash changes.
   if ('onhashchange' in window) {
