@@ -40,6 +40,8 @@ var navigateStyles = function(type) {
 
 $(function() {
 
+  $('#zengarden-age').text(new Date().getFullYear() - 2003);
+
   // For permalinks and default style.
   switchStyle();
 
