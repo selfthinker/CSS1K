@@ -1,9 +1,10 @@
 A demonstration of what can be accomplished through only 1 K of CSS.
-
-Fork to participate!
-
 Available at http://css1k.net
 
-Vendor prefixes are added automatically with PrefixFree, so submit your file minified and without any vendor prefixed properties.
+Conceived and raised by Jacob Rask [https://github.com/jacobrask], adopted by Anika Henke [https://github.com/selfthinker] and nurtured by lots of contributors [https://github.com/selfthinker/CSS1K/graphs/contributors].
 
+Fork to participate!
+Vendor prefixes are added automatically with PrefixFree, so submit your file minified and without any vendor prefixed properties.
 Remember that the file has to be 1024 bytes or less.
+
+Licensed under the MIT license [http://www.opensource.org/licenses/mit-license.php].
