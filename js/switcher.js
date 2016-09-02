@@ -11,6 +11,7 @@ var switchStyle = function() {
       PrefixFree ? PrefixFree.prefixCSS(data)
                  : data
     );
+    $('html, body').animate({ scrollTop: 0 });
   });
   if (window.location.host === 'css1k.net' && styleSlug !== 'default') {
     ga('send', 'pageview', styleSlug);
