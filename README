@@ -6,5 +6,6 @@ Conceived and raised by Jacob Rask [https://github.com/jacobrask], adopted by An
 Fork to participate!
 Vendor prefixes are added automatically with PrefixFree, so submit your file minified and without any vendor prefixed properties.
 Remember that the file has to be 1024 bytes or less.
+You can use `tools/1kcheck[.exe] styles` to check if your file is still within that limit.
 
 Licensed under the MIT license [http://www.opensource.org/licenses/mit-license.php].
