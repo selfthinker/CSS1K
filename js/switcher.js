@@ -6,7 +6,7 @@ var switchStyle = function() {
   var styleSlug = window.location.hash.slice(1) || 'default'
     , styleUrl = 'styles/' + styleSlug + '.css';
   // Use PrefixFree to add vendor prefixes if it exists and is functional.
-  $.get(styleUrl).success(function(data) {
+  $.get(styleUrl, function(data) {
     $('style').first().text(
       PrefixFree ? PrefixFree.prefixCSS(data)
                  : data
