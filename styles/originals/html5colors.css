@@ -9,15 +9,14 @@ a, html {
 }
 html {
 	font: 13px Tahoma;
-	background: -webkit-radial-gradient(black 15%, transparent 16%) 0 0, -webkit-radial-gradient(black 15%, transparent 16%) 8px 8px;
-	background: -moz-radial-gradient(black 15%, transparent 16%) 0 0, -moz-radial-gradient(black 15%, transparent 16%) 8px 8px;
-	background: -o-radial-gradient(black 15%, transparent 16%) 0 0, -o-radial-gradient(black 15%, transparent 16%) 8px 8px;
-	background: radial-gradient(black 15%, transparent 16%) 0 0, radial-gradient(black 15%, transparent 16%) 8px 8px;
-	background-color:#282828;
+	background: #282828 -webkit-radial-gradient(black 15%, transparent 16%) 0 0, -webkit-radial-gradient(black 15%, transparent 16%) 8px 8px;
+	background: #282828 -moz-radial-gradient(black 15%, transparent 16%) 0 0, -moz-radial-gradient(black 15%, transparent 16%) 8px 8px;
+	background: #282828 -o-radial-gradient(black 15%, transparent 16%) 0 0, -o-radial-gradient(black 15%, transparent 16%) 8px 8px;
+	background: #282828 radial-gradient(black 15%, transparent 16%) 0 0, radial-gradient(black 15%, transparent 16%) 8px 8px;
 	background-size:16px 16px;
 }
 body {
-	background-color: rgba(239, 100, 41, 0.15);
+	background-color: rgba(239, 100, 41, .15);
 	width: 890px;
 	margin: 0 auto;
 	padding: 30px;

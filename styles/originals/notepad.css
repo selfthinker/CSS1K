@@ -5,12 +5,12 @@ html {
     border-width: 40px 100px 80px 100px;
     border-color: #513201;
     border-style: solid;
-    background: -moz-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(0,0,0,0) 40%, rgba(0,0,0,0.25) 50%, rgba(0,0,0,0.12) 51%, rgba(0,0,0,0) 60%, rgba(255,255,255,0) 100%);
-    background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(255,255,255,0)), color-stop(40%,rgba(0,0,0,0)), color-stop(50%,rgba(0,0,0,0.25)), color-stop(51%,rgba(0,0,0,0.12)), color-stop(60%,rgba(0,0,0,0)), color-stop(100%,rgba(255,255,255,0)));
-    background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%,rgba(0,0,0,0) 40%,rgba(0,0,0,0.25) 50%,rgba(0,0,0,0.12) 51%,rgba(0,0,0,0) 60%,rgba(255,255,255,0) 100%);
-    background: -o-linear-gradient(left, rgba(255,255,255,0) 0%,rgba(0,0,0,0) 40%,rgba(0,0,0,0.25) 50%,rgba(0,0,0,0.12) 51%,rgba(0,0,0,0) 60%,rgba(255,255,255,0) 100%);
-    background: -ms-linear-gradient(left, rgba(255,255,255,0) 0%,rgba(0,0,0,0) 40%,rgba(0,0,0,0.25) 50%,rgba(0,0,0,0.12) 51%,rgba(0,0,0,0) 60%,rgba(255,255,255,0) 100%);
-    background: linear-gradient(left, rgba(255,255,255,0) 0%,rgba(0,0,0,0) 40%,rgba(0,0,0,0.25) 50%,rgba(0,0,0,0.12) 51%,rgba(0,0,0,0) 60%,rgba(255,255,255,0) 100%)
+    background: -moz-linear-gradient(left, rgba(255,255,255,0) 0%, transparent 40%, rgba(0,0,0,0.25) 50%, rgba(0,0,0,0.12) 51%, transparent 60%, rgba(255,255,255,0) 100%);
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(255,255,255,0)), color-stop(40%,transparent), color-stop(50%,rgba(0,0,0,0.25)), color-stop(51%,rgba(0,0,0,0.12)), color-stop(60%,transparent), color-stop(100%,rgba(255,255,255,0)));
+    background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%,transparent 40%,rgba(0,0,0,0.25) 50%,rgba(0,0,0,0.12) 51%,transparent 60%,rgba(255,255,255,0) 100%);
+    background: -o-linear-gradient(left, rgba(255,255,255,0) 0%,transparent 40%,rgba(0,0,0,0.25) 50%,rgba(0,0,0,0.12) 51%,transparent 60%,rgba(255,255,255,0) 100%);
+    background: -ms-linear-gradient(left, rgba(255,255,255,0) 0%,transparent 40%,rgba(0,0,0,0.25) 50%,rgba(0,0,0,0.12) 51%,transparent 60%,rgba(255,255,255,0) 100%);
+    background: linear-gradient(left, rgba(255,255,255,0) 0%,transparent 40%,rgba(0,0,0,0.25) 50%,rgba(0,0,0,0.12) 51%,transparent 60%,rgba(255,255,255,0) 100%)
 }
 
 body {
@@ -27,14 +27,14 @@ body {
 }
 
 * {
-    font: 13px/30px "Lucida Grande", Arial, sans-serif;
+    font: 13px/30px sans-serif;
     position: relative
 }
 
 h1, nav h2 {
     top: -6px;
     font-size: 32px;
-    font-weight: bold
+    font-weight: 700
 }
 
 h2 {
@@ -44,7 +44,7 @@ h2 {
 }
 
 h2 abbr {
-    font-weight: bold
+    font-weight: 700
 }
 
 p, ul, ol, h1, nav h2 {
@@ -70,12 +70,12 @@ nav {
 }
 
 nav ul {
-    list-style-type: none;
+    list-style: none;
     padding: 0
 }
 
 nav * {
-    font-family: "Comic Sans", "Comic Sans MS", cursive
+    font-family: cursive
 }
 
 nav li a:first-child {

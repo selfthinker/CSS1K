@@ -6,7 +6,7 @@ body{
         radial,
         50% 0,200,
         50% -99,900,
-        from(rgba(0,0,0,0)),to(#000)
+        from(transparent),to(#000)
     ),
     -webkit-gradient(
         linear,
@@ -19,7 +19,7 @@ body{
     background: -moz-radial-gradient(
         50% 0,
         circle closest-corner,
-        rgba(0,0,0,0),
+        transparent,
         #000
     ), 
     -moz-linear-gradient(
@@ -31,7 +31,7 @@ body{
     background: -o-radial-gradient(
         50% 0,
         circle closest-corner,
-        rgba(0,0,0,0),
+        transparent,
         #000
     ), 
     -o-linear-gradient(
@@ -43,7 +43,7 @@ body{
     background: radial-gradient(
         50% 0,
         circle closest-corner,
-        rgba(0,0,0,0),
+        transparent,
         #000
     ), 
     linear-gradient(
@@ -66,27 +66,27 @@ abbr:after,p a:before{
         linear,
         right top,
         left top,
-        from(rgba(0,0,0,0)),
+        from(transparent),
         color-stop(.5,#000),
-        to(rgba(0,0,0,0))
+        to(transparent)
     );
     background-image:-moz-linear-gradient(
         right center,
-        rgba(0,0,0,0) 0,
+        transparent 0,
         #000 50%,
-        rgba(0,0,0,0) 99%
+        transparent 99%
     );
     background-image:-o-linear-gradient(
         right center,
-        rgba(0,0,0,0) 0,
+        transparent 0,
         #000 50%,
-        rgba(0,0,0,0) 99%
+        transparent 99%
     );
     background-image:linear-gradient(
         right center,
-        rgba(0,0,0,0) 0,
+        transparent 0,
         #000 50%,
-        rgba(0,0,0,0) 99%
+        transparent 99%
     );}
 p a:before{margin-left: 2%}
 
@@ -103,22 +103,22 @@ nav ul:after{
         left bottom,
         left top,
         from(#000),
-        to(rgba(0,0,0,0))
+        to(transparent)
     );
     background-image: -moz-linear-gradient(
         center bottom,
         #000 0%,
-        rgba(0,0,0,0) 99%
+        transparent 99%
     );
     background-image:-o-linear-gradient(
         center bottom,
         #000 0%,
-        rgba(0,0,0,0) 99%
+        transparent 99%
     );
     background-image:linear-gradient(
         center bottom,
         #000 0%,
-        rgba(0,0,0,0) 99%
+        transparent 99%
     );}
 
 

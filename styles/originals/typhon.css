@@ -58,8 +58,6 @@ body {
   font: 16px/26px georgia;
   color: #445d6e;
   margin: auto;
-  -webkit-animation: g .5s 1 ease-in;
-  -moz-animation: g .7s 1 ease-in;
   animation: g .7s 1 ease-in;
 }
 
@@ -68,7 +66,6 @@ article {
   width: 536px;
   float: left;
   padding: 52px 52px 26px;
-  -webkit-box-shadow: 0 1px 3px #a3c3dc;
   box-shadow: 0 1px 3px #a3c3dc;
 }
 
@@ -78,7 +75,6 @@ nav {
   padding: 26px 26px 0;
   margin-top: 52px;
   background: #e5eef5;
-  -webkit-box-shadow: 0 1px 3px #a3c3dc;
   box-shadow: 0 1px 3px #a3c3dc;
 }
 nav li {

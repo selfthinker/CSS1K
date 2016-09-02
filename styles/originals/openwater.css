@@ -16,17 +16,7 @@ body > header {
 	background: #CEF;
 	height: 150px;
 }
-@-moz-keyframes L {
-	30% {
-		-moz-transform: translate(5%, 5px);
-	}
-	50% {
-		-moz-transform: translate(4%, 0);
-	}
-	80% {
-		-moz-transform: translate(-1%, 5px);
-	}
-}
+
 @-webkit-keyframes L {
 	30% {
 		-webkit-transform: translate(5%, 5px);
@@ -36,6 +26,17 @@ body > header {
 	}
 	80% {
 		-webkit-transform: translate(-1%, 5px);
+	}
+}
+@-moz-keyframes L {
+	30% {
+		-moz-transform: translate(5%, 5px);
+	}
+	50% {
+		-moz-transform: translate(4%, 0);
+	}
+	80% {
+		-moz-transform: translate(-1%, 5px);
 	}
 }
 @keyframes L {
@@ -49,6 +50,7 @@ body > header {
 		transform: translate(-1%, 5px);
 	}
 }
+
 h1 {
 	border-bottom: 30px solid #000;
 	bottom: 0;
