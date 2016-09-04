@@ -3,8 +3,11 @@
 var hash = window.location.hash;
 
 var switchStyle = function() {
-  var styleSlug = window.location.hash.slice(1) || 'default'
-    , styleUrl = 'styles/' + styleSlug + '.css';
+  var styleSlug = window.location.hash.slice(1) || 'default',
+    styleUrl = 'styles/' + styleSlug + '.css',
+    tags = $('a[href="#'+styleSlug+'"]').parent().data('tags'),
+    firstTag = tags && tags.split(",")[0];
+
   // Use PrefixFree to add vendor prefixes if it exists and is functional.
   $.get(styleUrl, function(data) {
     $('style').first().text(
@@ -13,6 +16,9 @@ var switchStyle = function() {
     );
     $('html, body').animate({ scrollTop: 0 });
   });
+
+  $('header nav ul').data('filteredby', firstTag);
+
   if (window.location.host === 'css1k.net' && styleSlug !== 'default') {
     ga('send', 'pageview', styleSlug);
   }
@@ -21,14 +27,14 @@ var switchStyle = function() {
 var navigateStyles = function(type) {
   var curStyleLink = window.location.hash || './',
     $curStyleLink = $('a[href="'+curStyleLink+'"]'),
-    $nextStyleLink = $curStyleLink.parent().next('li').find('a:first-child'),
-    $prevStyleLink = $curStyleLink.parent().prev('li').find('a:first-child');
+    $nextStyleLink = $curStyleLink.parent().next('li:not([data-filter])').find('a:first-child'),
+    $prevStyleLink = $curStyleLink.parent().prev('li:not([data-filter])').find('a:first-child');
 
   if (!$nextStyleLink.length) {
     $nextStyleLink = $('header nav li:first-child a:first-child');
   }
   if (!$prevStyleLink.length) {
-    $prevStyleLink = $('header nav li:last-child a:first-child');
+    $prevStyleLink = $('header nav li:not([data-filter])').last().find('a:first-child');
   }
 
   if (type === 'prev') {
@@ -38,6 +44,48 @@ var navigateStyles = function(type) {
     $nextStyleLink[0].click();
   }
 };
+
+var isInData = function(data, value) {
+  if (data) {
+    var dataItems = data.split(",");
+    return ($.inArray(value, dataItems) !== -1);
+  }
+  return false;
+};
+
+var filterByTag = function($items, tag) {
+  var $newItems = [],
+    $itemsParent = $items.parent();
+
+  $items.each(function(){
+    var $this = $(this),
+      tags = $this.data('tags');
+
+    if (isInData(tags, tag)) {
+      $newItems.push($this);
+    }
+  });
+
+  $items.detach();
+  $itemsParent.append($newItems);
+  $itemsParent.data('filteredby', tag);
+};
+
+var filterStyles = function() {
+  var $navList = $('header nav ul'),
+    $navItems = $('li', $navList),
+    activeFilter = $navList.data('filteredby') || 'featured',
+    $filterLinks = $('[data-filter] a', $navList);
+
+  filterByTag($navItems, activeFilter);
+
+  $filterLinks.on('click', function(e){
+    var $this = $(this);
+    var filter = $this.parent().parent().data('filter');
+    filterByTag($navItems, filter);
+  });
+};
+
 
 $(function() {
 
@@ -67,6 +115,8 @@ $(function() {
       }
     }, 250);
   }
+
+  filterStyles();
 });
 
 })();
